@@ -9,7 +9,7 @@ var palla = {
 };
 console.log('Peso della palla iniziale: ' + palla.peso);
 
-palla.peso = parseInt(prompt('Inserisci il nuovo peso della palla.'))
+palla.peso = parseInt(prompt('Inserisci il nuovo peso della palla.'));
 console.log('Peso modificato della palla: ' + palla.peso);
 
 // ---------------------------------------------------------------------------------------
