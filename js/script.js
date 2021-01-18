@@ -77,6 +77,7 @@ var totalePeso = 0;
 for (var i = 0; i < zucchine.length; i++) {
     totalePeso += zucchine[i].peso;
 }
+
 console.log('Tutte le zucchine pesano: ' + totalePeso + 'gr');
 
 // ---------------------------------------------------------------------------------------
@@ -87,9 +88,25 @@ console.log('Tutte le zucchine pesano: ' + totalePeso + 'gr');
 Dividi in due array separati le zucchine che misurano meno o più di 15cm.
 Infine stampa separatamente quanto pesano i due gruppi di zucchine. */
 
-var superiori15 = [];
-var minori15 = [];
+var maggioriDi15 = [];
+var minoriDi15 = [];
+var pesoMaggiori = 0;
+var pesoMinori = 0;
 
+for (var i = 0; i < zucchine.length; i++) {
+    if (zucchine[i].lunghezza < 15){
+        minoriDi15.push(zucchine[i]);
+        pesoMinori += zucchine[i].peso;
+    } else {
+        maggioriDi15.push(zucchine[i]);
+        pesoMaggiori += zucchine[i].peso;
 
+    }
+}
+
+console.log(maggioriDi15);
+console.log('Totale peso delle zucchine che misurano più di 15cm: ' + pesoMaggiori + 'gr');
+console.log(minoriDi15);
+console.log('Totale peso delle zucchine che misurano meno di 15cm: ' + pesoMinori + 'gr');
 
 // ---------------------------------------------------------------------------------------
